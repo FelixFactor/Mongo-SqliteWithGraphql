@@ -1,8 +1,9 @@
-Small project that runs a CRUD with Graphql for Mongo and SQlite.
+Small study project that integrates [GraphQL](https://graphql.org/) with [MongoDB](https://www.mongodb.com/) and [SQLite](https://sqlite.org/index.html).
 
-Install:
-"npm install" in console to install dependencies.
+To install run in the project directory:
+### "npm install"
 
-Run:
-"npm start" to run the project. 
-In browser use "localhost:8080/graphql" to access the Graphql GUI.
+Run the project:
+### "npm start" 
+
+Open [localhost:8080/graphql](http://localhost:8080/graphql) to access the Graphql GUI.
