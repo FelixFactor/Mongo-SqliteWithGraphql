@@ -36,18 +36,20 @@ const friendSchema = new mongoose.Schema({
 
 const Friends = mongoose.model("friends", friendSchema);
 
-//SQL lite
+//SQLite connection
 const sequelizeCon = new Sequelize("database", null, null, {
     dialect: "sqlite",
     storage: "./alien.sqlite",
 });
 
+//Defines the "aliens" table
 const Aliens = sequelizeCon.define("aliens", {
     firstName: {type: Sequelize.STRING},
     lastName: {type: Sequelize.STRING},
     planet: {type: Sequelize.STRING}
 });
 
+//Creates entries in SQLite DB
 Aliens.sync({force: true}).then(() => {
     _.times(10, (i) => {
         Aliens.create({
@@ -58,4 +60,4 @@ Aliens.sync({force: true}).then(() => {
     })
 })
 
-export { Friends, Aliens };
+export { Friends, Aliens }; 

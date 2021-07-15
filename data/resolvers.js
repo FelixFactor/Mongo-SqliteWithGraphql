@@ -3,6 +3,7 @@ import { Friends, Aliens} from "./dbConnectors";
 //resolver Map
 export const resolvers = {
     Query: {
+        //Mongo query
         getOneFriend: (root, { id }) => {
             return new Promise(( resolve, object) => {
                 Friends.findById(id, (err, friend) => {
@@ -11,9 +12,11 @@ export const resolvers = {
                 })
             })
         },
+        //Mongo query
         getAllFriends: () => {
             return Friends.find();
         },
+        //SQLite query
         getAliens: () => {
             return Aliens.findAll();
         }
